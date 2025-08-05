@@ -29,8 +29,5 @@ public class TravellogController {
         return ResponseEntity.ok(travellogService.getStat(id));
     }
 
-    @GetMapping("/user/{name}")
-    public ResponseEntity<Map<String, TravellogDtoStat>> getTravelStatForUserOnLastMonth(@PathVariable String name) {
-        return ResponseEntity.ok(travellogService.getStatForUserLastMonth(name));
-    }
+
 }

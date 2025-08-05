@@ -37,7 +37,7 @@ public class ObservationService {
     }
 
     public ObservationDtoResponse get (long id){
-        return observationRepository.findById(id).orElseThrow(NotFoundException::new).entityToDto();
+        return observationRepository.findById(id).orElseThrow().entityToDto();
     }
 
     public List<ObservationDtoResponse> getByLocation (String location){

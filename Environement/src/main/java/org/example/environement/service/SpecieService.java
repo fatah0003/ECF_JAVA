@@ -33,7 +33,7 @@ public class SpecieService {
     }
 
     public SpecieDtoResponse get(long id){
-        return specieRepository.findById(id).orElseThrow(NotFoundException::new).entityToDto();
+        return specieRepository.findById(id).orElseThrow().entityToDto();
     }
 
 }

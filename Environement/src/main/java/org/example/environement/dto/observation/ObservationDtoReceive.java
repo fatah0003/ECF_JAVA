@@ -36,7 +36,7 @@ public class ObservationDtoReceive {
                 .longitude(this.getLongitude())
                 .observationDate(LocalDate.parse(this.getObservationDateStr(),format))
                 .comment(this.getComment())
-                .specie(specieRepository.findById(this.getSpecieId()).orElseThrow(NotFoundException::new))
+                .specie(specieRepository.findById(this.getSpecieId()).orElseThrow())
                 .travellogs(this.getTravellogs().stream().map(TravellogDtoReceive::dtoToEntity).collect(Collectors.toList()))
                 .build();
 
